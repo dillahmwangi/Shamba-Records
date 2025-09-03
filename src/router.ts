@@ -4,12 +4,12 @@
 import { components, hooks, utils } from '@generouted/react-router/client'
 
 export type Path =
+  | `/`
   | `/auth/login`
   | `/auth/register`
-  | `/dashboard/crops`
-  | `/dashboard/farmers`
-  | `/dashboard/home`
-  | `/dashboard/profile`
+  | `/crops`
+  | `/farmers`
+  | `/profile`
 
 export type Params = {
   
