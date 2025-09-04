@@ -1,9 +1,9 @@
 import React from "react";
 import { GiWheat } from "react-icons/gi";
 import { FaMap, FaDollarSign } from "react-icons/fa";
-import { TbBox } from "react-icons/tb"; // ✅ Correct icon name
+import { TbBox } from "react-icons/tb"; 
 
-// ✅ Reusable StatCard Component
+
 const StatCard = ({ title, value, subText, icon, iconBgColor }) => {
   return (
     <div className="flex items-center justify-between bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
@@ -19,7 +19,7 @@ const StatCard = ({ title, value, subText, icon, iconBgColor }) => {
   );
 };
 
-// ✅ Container Component (using the StatCard multiple times)
+
 const StatsCardsContainer = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
@@ -57,3 +57,42 @@ const StatsCardsContainer = () => {
 };
 
 export default StatsCardsContainer;
+
+
+export const AdminDashboardCards = () => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+      <StatCard
+        title="Total Farmers"
+        value="24"
+        subText={<span className="text-green-500">↑ +3 this month</span>}
+        icon={<GiWheat className="text-blue-500 text-xl" />}
+        iconBgColor="bg-blue-100"
+      />
+      <StatCard
+        title="Total Crops"
+        value="8"
+        subText="Across 45 acres"
+        icon={<FaMap className="text-green-500 text-xl" />}
+        iconBgColor="bg-green-100"
+      />
+      <StatCard
+        title="Active Farmers"
+        value="6"
+        subText={<span className="text-red-500">⚠ 2 overdue</span>}
+      
+        icon={<TbBox className="text-orange-500 text-xl" />}
+        iconBgColor="bg-orange-100"
+      />
+      <StatCard
+        title="Revenue (MTD)"
+        value="$12,450"
+        subText={<span className="text-green-500">↑ +15.3%</span>}
+        icon={<FaDollarSign className="text-purple-500 text-xl" />}
+        iconBgColor="bg-purple-100"
+      />
+    </div>
+  );
+};
+
+

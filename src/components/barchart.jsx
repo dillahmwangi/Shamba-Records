@@ -24,7 +24,7 @@ const BarChartCard = () => {
     datasets: [{
       label: 'Harvested', // Label for the legend
       data: [2, 4, 6, 8, 12, 15, 18, 21, 16, 12, 8, 5], // Data points from your image
-      backgroundColor: '#00BF40FF', // Green bars
+      backgroundColor: '#00BF40FF', 
       borderRadius: 4, // Slightly rounded bar tops
     }],
   };
